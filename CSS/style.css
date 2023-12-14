@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson&family=Poppins&family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    min-height: 100vh;
+    background: #161616;
+    background-size: cover;
+    background-position: center;
+}
+
+#home-body {
+    min-height: 1000vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.logo-home {
+    position: relative;
+    margin-top: 30px;
+    margin-right: 75px;
+}
+
+.navigation a {
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+    position: relative;
+    margin-left: 50px;
+    top: 10px;
+    font-family: 'Quicksand';
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Quicksand';
+}
+
+.wrapper-login {
+    position: fixed;
+    margin-top: 230px;
+    margin-left: -425px;
+    width: 700px;
+    height: 400px;
+    background: transparent;
+    border: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.wrapper-signup {
+    position: fixed;
+    margin-top: 150px;
+    margin-left: -425px;
+    width: 700px;
+    height: 400px;
+    background: transparent;
+    border: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+#checkbox {
+    width: 15px;
+    height: 20px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.return-home p a {
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+}
+
+.return-home p a span {
+    color: #FED586;
+    font-size: 2.5em;
+    position: relative;
+    top: 15px;
+}
+
+/*Login*/
+
+.navigation2 .login-button {
+    width: 85px;
+    height: 35px;
+    background: #fff;
+    border: transparent;
+    border-style: solid;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #282828;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navigation2 .login-button:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    border-width: .12em;
+}
+
+.login-main-content h2 {
+    color: #D0A65B;
+    font-size: 4em;
+    position: fixed;
+    top: 110px;
+    left: 120px;
+}
+
+.login-main-content h2 span {
+    color: #fff;
+}
+
+.login1 {
+    color: #fff;
+    position: fixed;
+    top: 200px;
+    left: 122px;
+}
+
+.login1 p a {
+    color: #D0A65B;
+    text-decoration: none;
+}
+
+.login1 p a:hover {
+    text-decoration: underline;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: transparent;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: .8em;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input::placeholder {
+    color: #fff;
+    font-weight: lighter;
+    opacity: .3;
+}
+
+.input-box input {
+    width: 500px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 35px 0 12px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 12px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 65px;
+}
+
+.remember-forgot {
+    font-size: .8em;
+    color: #fff;
+    font-weight: 500;
+    margin: 25px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 8px;
+
+}
+
+.remember-forgot a {
+    color: #fff;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background: #D0A65B;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 500;
+}
+
+/*Sign Up*/
+
+.navigation2 .signup-button {
+    width: 85px;
+    height: 35px;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    border-width: .12em;
+}
+
+.navigation2 .signup-button:hover {
+    background: #fff;
+    color: #282828;
+    border: transparent;
+}
+
+.signup-main-content h2 {
+    color: #D0A65B;
+    font-size: 4em;
+    position: fixed;
+    top: 40px;
+    left: 120px;
+}
+
+.signup-main-content h2 span {
+    color: #fff;
+}
+
+.signup1 {
+    color: #fff;
+    position: fixed;
+    top: 125px;
+    left: 122px;
+}
+
+.signup1 p a {
+    color: #D0A65B;
+    text-decoration: none;
+}
+
+.signup1 p a:hover {
+    text-decoration: underline;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: transparent;
+    margin: 30px 0;
+}
+
+/*Home*/
+
+.home-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home-banner {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+.logo-banner {
+    position: relative;
+    top: 150px;
+    z-index: 99;
+}
+
+.home-banner h2 {
+    position: relative;
+    top: 140px;
+    z-index: 99;
+    font-family: 'Judson';
+    font-size: 8em;
+    font-weight: 100;
+    background: -webkit-linear-gradient(#FED586, #fff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-banner p {
+    position: relative;
+    top: 140px;
+    z-index: 99;
+    font-family: 'Quicksand';
+    font-size: 2.3em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.book-button .book-event {
+    position: relative;
+    top: 180px;
+    justify-content: center;
+    text-align: center;
+    z-index: 99;
+    width: 300px;
+    height: 45px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.book-button .book-event:hover {
+    background: #fff;
+    color: #171818;
+}
+
+.down {
+    position: relative;
+    top: 250px;
+    z-index: 99;
+}
+
+.home-content p {
+    position: relative;
+    top: 380px;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Judson';
+    font-size: 1.8em;
+    word-spacing: 5px;
+    z-index: 99;
+}
+
+.bubble-design1 {
+    position: absolute;
+    top: 800px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+}
+
+.bubble-design2 {
+    position: absolute;
+    top: 1600px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+}
+
+.bubble-design3 {
+    position: absolute;
+    top: 2400px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+}
+
+.bubble-design4 {
+    position: absolute;
+    top: 3150px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+}
+
+.bubble-design5 {
+    position: absolute;
+    top: 3900px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+}
+
+
+/*Wedding*/
+
+.wedding {
+    position: relative;
+    text-align: center;
+    top: 560px;
+    margin-right: 500px;
+    margin-left: 0px;
+    z-index: 99;
+}
+
+.wedding-pic {
+    position: absolute;
+    top: 825px;
+    left: 729px;
+    z-index: 99;
+}
+
+.wedding-pic2 {
+    position: absolute;
+    top: 1550px;
+    right: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+.wedding h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.wedding p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.wedding .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.wedding .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Birthday*/
+
+.birthday {
+    position: relative;
+    text-align: center;
+    top: 1070px;
+    margin-right: 0px;
+    margin-left: 500px;
+    z-index: 99;
+}
+
+.birthday-pic {
+    position: absolute;
+    top: 1600px;
+    right: 729px;
+    z-index: 99;
+}
+
+.birthday-pic2 {
+    position: absolute;
+    top: 2300px;
+    right: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+.birthday h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.birthday p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.birthday .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.birthday .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Christening*/
+
+.christening {
+    position: relative;
+    text-align: center;
+    top: 1580px;
+    margin-right: 500px;
+    margin-left: 0;
+    z-index: 99;
+}
+
+.christening-pic {
+    position: absolute;
+    top: 2350px;
+    left: 729px;
+    z-index: 99;
+}
+
+.christening-pic2 {
+    position: absolute;
+    top: 3050px;
+    right: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+.christening h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.christening p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.christening .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.christening .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Anniversary*/
+
+.anniversary {
+    position: relative;
+    text-align: center;
+    top: 2080px;
+    margin-right: 0px;
+    margin-left: 500px;
+    z-index: 99;
+}
+
+.anniversary-pic {
+    position: absolute;
+    top: 3125px;
+    right: 729px;
+    z-index: 99;
+}
+
+.anniversary-pic2 {
+    position: absolute;
+    top: 3800px;
+    right: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+.anniversary h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.anniversary p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.anniversary .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.anniversary .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Corporate*/
+
+.corporate {
+    position: relative;
+    text-align: center;
+    top: 2570px;
+    margin-right: 500px;
+    margin-left: 0;
+    z-index: 99;
+}
+
+.corporate-pic {
+    position: absolute;
+    top: 3860px;
+    left: 729px;
+    z-index: 99;
+}
+
+.corporate-pic2 {
+    position: absolute;
+    top: 4550px;
+    right: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+.corporate h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.corporate p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.corporate .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.corporate .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Full Story*/
+
+.story {
+    position: absolute;
+    margin-top: 3050px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 600px;
+    background: #272727;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+}
+
+.story .logo-story {
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.story h3 {
+    position: absolute;
+    top: 100px;
+    color:#fff;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.story h1 {
+    position: absolute;
+    top: 150px;
+    color: #FED586;
+    font-family: 'Judson';
+    font-weight: 200;
+    font-size: 2.5em;
+}
+
+.story p {
+    position: absolute;
+    top: 270px;
+    color: #fff;
+    font-family: 'Quicksand';
+    font-size: 1em;
+}
+
+.fullstory-button .full-story {
+    position: relative;
+    top: 480px;
+    width: 230px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.fullstory-button .full-story:hover {
+    background: #fff;
+    color: #171818;
+}
+
+.story .story1 {
+    position: absolute;
+    top: 20px;
+    right: 1035px;
+    left: 0px;
+    z-index: 99;
+}
+
+.story .story2 {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    left: 828px;
+    z-index: 99;
+}

@@ -1,0 +1,891 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #171818;
+    --second-bg-color: #272727;
+    --text-color: #fff;
+    --main-color: #FED586;
+}
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 15px 3%;
+    border-bottom: 1px solid transparent;
+    transition: all .50s ease;
+
+}
+
+.logo img{
+    margin-top: 2px;
+    width: 50px;
+}
+
+.navbar{
+    margin-left: 100px;
+    list-style: none;
+    background: transparent;
+    display: flex;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+}
+.navbar ul li a{
+    display: block;
+    padding-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+.navbar ul li ul.dropdown li{
+    display: block;
+    padding: 2px;
+    transition: all 0.5s ease-in-out;
+}
+.navbar ul li ul.dropdown li a{
+    font-size: .8em;
+}
+.navbar ul li ul.dropdown {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 5px;
+}
+
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -1px;
+    left: 0;
+    background: var(--main-color);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    
+}
+
+.navbar ul li a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navbar ul li ul a:hover{
+    font-weight: bolder;
+}
+
+.navbar ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 20px;
+    transition: all .50s ease;
+}
+
+.navbar a.active{
+    font-weight: bolder;
+}
+
+/*NOT LOGGED*/
+.account{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.signup{
+    margin-right: 5px;
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+    font-weight: 500;
+}
+
+.signup:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+}
+
+.login{
+    color: var(--bg-color);
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+}
+
+.login:hover {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+/*IF LOGGED */
+.account-logged{
+    display: flex;
+    align-items: center;
+    font-size: .8em;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.account-logged .fullname{
+    color: #fff;
+    font-weight: bold;
+    
+}
+.account-logged .fullname:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.account-logged img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-top:3px;
+
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    margin-left: 20px;
+}
+
+/* -------------------------- BOOKING SECTION ----------------------*/
+
+/* Banner and First Form Section */
+
+.booking-banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('Pictures/wedding/booking-banner-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.booking-banner-container {
+    position: relative;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.booking-banner-container h2{
+    position: relative;
+    top: 125px;
+    z-index: 99;
+    font-family: 'Judson';
+    font-size: 5.5em;
+    font-weight: 100;
+    line-height: 90px;
+    color: var(--text-color);
+}
+
+.booking-banner-container p{
+    position: relative;
+    top: 125px;
+    margin-top: 10px;
+    z-index: 99;
+    font-family: 'Quicksand';
+    font-size: 1.3em;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.booking-form-container{
+    position: absolute;
+    background-color: #232323;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    right: 50px;
+    left: 550px;
+    top: 125px;
+}
+
+.booking-form-container h2{
+    position: relative;
+    z-index: 99;
+    font-family: 'Judson';
+    font-size: 2em;
+    font-weight: 100;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.booking-form-container p{
+    position: relative;
+    z-index: 99;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+  
+.form-row {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.form-row input {
+    background-color: #171818;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    font-size: .8em;
+    font-weight: 300;
+    color: #fff;
+    border-style: none;
+    z-index: 100;
+}
+
+input::placeholder {
+    font-family: 'Quicksand';
+    color: #B0B0B0;
+    font-weight: 300;
+    background: transparent;
+}
+  
+.form-row--full {
+    grid-column: 1 / span 2;
+    background-color: transparent;
+}
+  
+label {
+    font-size: .8em;
+    color: #FED586;
+    font-family: 'Quicksand';
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-left: 6px;
+    padding-top: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.proceed-btn {
+    position: relative;
+    left: 92.5%;
+    transform: translateX(-50%);
+    width: 15%;
+    height: 30px;
+    background: #D0A65B;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--bg-color);
+    font-weight: 900;
+    font-family: 'Judson';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.proceed-btn:hover {
+    background: transparent;
+    outline: none;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1em;
+    color: #FED586;
+    font-weight: 800;
+}
+
+/* Booking Form Section */
+
+/* Column 1 */
+
+.booking-form {
+    margin-top: 380px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: #232323;
+}
+  
+.col1 {
+    padding: 40px;
+}
+
+.col1 h2{
+    position: relative;
+    font-family: 'Judson';
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+.col1 h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #FED586;
+}
+
+.bookpic img{
+    margin-top: 30px;
+}
+
+
+/* Column 2 */
+
+.col2 {
+    padding: 40px;
+}
+
+.col2 h2 {
+    position: relative;
+    font-family: 'Judson';
+    font-size: 1.6em;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.col2 h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #FED586;
+}
+
+.col2 p {
+    margin-bottom: 10px;
+    font-size: .9em;
+}
+
+select {
+    background-color: #171818;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    font-size: .8em;
+    font-weight: 300;
+    color: #fff;
+    border-style: none;
+    z-index: 100;
+    margin-bottom: 18px;
+}
+
+input[type="number"] {
+    background-color: #171818;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    font-size: .8em;
+    font-weight: 300;
+    color: #fff;
+    border-style: none;
+    z-index: 100;
+    margin-bottom: 18px;
+}
+
+input[type="number"]::placeholder {
+    color: #fff;
+}
+
+select option[disabled] {
+    color: #999;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+  
+.checkbox-group label {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 15px;
+    color: #fff;
+    font-family: 'Quicksand';
+    font-weight: 100;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    color: #fff;
+}
+
+textarea {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #171818;
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.book-btn {
+    position: relative;
+    left: 87%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 35px;
+    background: #D0A65B;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--bg-color);
+    font-family: 'Judson';
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.book-btn:hover {
+    background: transparent;
+    outline: none;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1em;
+    color: #FED586;
+    font-weight: bolder;
+}
+
+/*------------------------------------------------ Pop up ------------------------------------------------*/
+
+.modal {
+
+    position: fixed; /* position the modal relative to the viewport */
+    z-index: 999; /* make the modal appear on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    backdrop-filter: blur(10px);
+  }
+
+.popup {
+    position: absolute;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #383838;
+    border-radius: 20px;
+    z-index: 999;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.5);
+    padding: 25px 30px;
+    
+}
+
+.popup h1{
+    color: var(--main-color);
+    font-family: 'Judson';
+    font-size: 2em;
+    font-weight: 500;
+    text-align: left;
+}
+
+.popup img{
+    float: right;
+    position: relative;
+    top: -30px;
+}
+
+.gridrow1-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.gridrow3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+    grid-template-rows: auto;
+}
+
+
+.grid-item1 input,
+.grid-item input{
+    background-color: #232323;
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-family: 'Poppins';
+    font-size: .8em;
+    font-weight: 500;
+    margin-bottom: 0px;
+    border-style: none;
+    color: white;
+    height: 30px;
+    width: 100%;
+}
+
+
+.grid-item1{
+    padding-top: 10px;
+}
+
+
+.grid-item1 h3{
+    position: relative;
+    top: -10px;
+    font-family: 'Judson';
+    font-size: 2.5em;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.grid-item h2,
+.grid-item h6,
+.grid-item1 h2,
+.grid-item1 h6{
+    position: relative;
+    margin-bottom: 10px;
+    font-family: 'Judson';
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.grid-item1 h2:before,
+.grid-item h2:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 20px; /* adjust as needed */
+    border-bottom: 2px solid #FED586;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.booknow-btn {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: .7em;
+    padding: 0px 5px 0px;
+    width: 90px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booknow-btn:hover {
+    background-color: white;
+    color: black;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: .7em;
+    padding: 0px 5px 0px;
+}
+
+.cancel-btn {
+    background-color: transparent;
+    color: var(--main-color);
+    border: solid 2px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: .7em;
+    padding: 0px 5px 0px;
+    width: 90px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    justify-items: center;
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+}
+
+.cancel-btn:hover {
+    background-color: white;
+    color: black;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: .7em;
+    padding: 0px 20px 0px;
+    border: solid 2px white;
+}
+
+/*footer*/
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #171818;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Poppins';
+    margin-top: 1050px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .sec{
+    margin-right: 30px;
+}
+footer .container .sec.aboutus{
+    width: 40%;
+}
+
+footer .container h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+}
+
+footer .container h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #FED586;
+}
+
+footer p{
+    color:#999;
+}
+
+.sci{
+    margin-top: 20px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.sci li a:hover{
+    background: #FED586;
+}
+.sci li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+.quicklinks{
+    position: relative;
+    width: 25%;
+}
+.quicklinks ul li{
+    list-style: none;
+}
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.quicklinks ul li a:hover{
+    color: #fff;
+}
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span{
+    color: #999;
+}
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+.contact .info li a:hover{
+    color: #fff;
+}
+.copyright{
+    width: 100%;
+    background: #1a1a1a;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+    border-top: #fff;
+    border-width: 1px;
+}
+
+
+@media screen and (min-width: 600px){
+    .footer-right >*{
+        flex: 1;
+    }
+    .footer-left{
+        flex:1 0px;
+    }
+    .footer-right{
+        flex: 2 0px;
+    }
+}
+
+/* ----------------------------------- LOADER SCREEN ------------------------------------ */
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #272727;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #FED586;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #FED586;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }

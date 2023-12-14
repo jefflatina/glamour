@@ -1,0 +1,331 @@
+loginsignup.css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-family: 'Judson';
+    font-family: 'Quicksand';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #171818;
+    --second-bg-color: #272727;
+
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    position: fixed;
+    bottom: 35px;
+    right: 30px;
+}
+
+.logo-home {
+    position: relative;
+    margin-top: 30px;
+    margin-right: 75px;
+}
+
+.navigation a {
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+    position: relative;
+    margin-left: 50px;
+    top: 10px;
+    font-family: 'Quicksand';
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Quicksand';
+}
+
+.wrapper-login {
+    position: fixed;
+    margin-top: 220px;
+    margin-left: 100px;
+    width: 700px;
+    height: 400px;
+    background: transparent;
+    border: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.wrapper-signup {
+    position: fixed;
+    margin-top: 150px;
+    margin-left: 100px;
+    width: 700px;
+    height: 400px;
+    background: transparent;
+    border: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+#checkbox {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.return-home p a {
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+}
+
+.return-home p a span {
+    color: #FED586;
+    font-size: 2.5em;
+    position: relative;
+    top: 15px;
+}
+
+/*Login*/
+
+.login-body{
+    background-image: url(Pictures/loginsignup/login-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.login-main-content h2 {
+    color: #D0A65B;
+    font-size: 4em;
+    position: fixed;
+    top: 70px;
+    left: 100px;
+    font-family: 'Poppins';
+}
+
+.login-main-content h2 span {
+    color: #fff;
+}
+
+.login1 {
+    color: #fff;
+    position: fixed;
+    top: 160px;
+    left: 100px;
+}
+
+.login1 p a {
+    color: #D0A65B;
+    text-decoration: none;
+}
+
+.login1 p a:hover {
+    text-decoration: underline;
+}
+
+.input-box {
+    position: relative; 
+    top: -40px;
+    width: 100%;
+    height: 20px;
+    border-bottom: #D0A65B;
+}
+
+.input-box label {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: .8em;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input::placeholder {
+    color: #fff;
+    font-weight: lighter;
+    opacity: .3;
+}
+
+.input-box input {
+    
+    width: 500px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 35px 0 12px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 12px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 65px;
+}
+
+.remember-forgot {
+    position: relative;
+    top: -30px;
+    font-size: .8em;
+    color: #fff;
+    font-weight: 500;
+    margin: 0px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 8px;
+
+}
+
+.remember-forgot a {
+    color: #fff;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 45px;
+    background: #D0A65B;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 800;
+}
+
+.btn:hover {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #FED586;
+    font-weight: 800;
+}
+
+/*Sign Up*/
+
+.navigation2 .signup-button {
+    width: 85px;
+    height: 35px;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    border-width: .12em;
+}
+
+.navigation2 .signup-button:hover {
+    background: #fff;
+    color: #282828;
+    border: transparent;
+}
+
+.signup-main-content h2 {
+    color: #D0A65B;
+    font-size: 4em;
+    position: fixed;
+    top: 40px;
+    left: 120px;
+}
+
+.signup-main-content h2 span {
+    color: #fff;
+}
+
+.signup1 {
+    color: #fff;
+    position: fixed;
+    top: 125px;
+    left: 122px;
+}
+
+.signup1 p a {
+    color: #D0A65B;
+    text-decoration: none;
+}
+
+.signup1 p a:hover {
+    text-decoration: underline;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: transparent;
+    margin: 30px 0;
+}

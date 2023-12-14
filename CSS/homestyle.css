@@ -1,0 +1,909 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #171818;
+    --second-bg-color: #272727;
+    --text-color: #fff;
+    --main-color: #FED586;
+}
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 15px 3%;
+    border-bottom: 1px solid transparent;
+    transition: all .50s ease;
+
+}
+
+.logo img{
+    margin-top: 2px;
+    width: 50px;
+}
+
+.navbar{
+    margin-left: 100px;
+    list-style: none;
+    background: transparent;
+    display: flex;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+}
+.navbar ul li a{
+    display: block;
+    padding-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+.navbar ul li ul.dropdown li{
+    display: block;
+    padding: 2px;
+    transition: all 0.5s ease-in-out;
+}
+.navbar ul li ul.dropdown li a{
+    font-size: .8em;
+}
+.navbar ul li ul.dropdown {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 5px;
+}
+
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -1px;
+    left: 0;
+    background: var(--main-color);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    
+}
+
+.navbar ul li a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navbar ul li ul a:hover{
+    font-weight: bolder;
+}
+
+.navbar ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 20px;
+    transition: all .50s ease;
+}
+
+.navbar a.active{
+    font-weight: bolder;
+}
+
+/*NOT LOGGED*/
+.account{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.signup{
+    margin-right: 5px;
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+    font-weight: 500;
+}
+
+.signup:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+}
+
+.login{
+    color: var(--bg-color);
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+}
+
+.login:hover {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+/*IF LOGGED */
+.account-logged{
+    display: flex;
+    align-items: center;
+    font-size: .8em;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.account-logged .fullname{
+    color: #fff;
+    font-weight: bold;
+    
+}
+.account-logged .fullname:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.account-logged img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-top:3px;
+
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    margin-left: 20px;
+}
+
+/*banner*/
+
+.banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('Pictures/home/home-banner-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.home-banner {
+    position: relative;
+    text-align: center;
+    top: 120px;
+}
+.home-banner h2{
+    position: relative;
+    top: -10px;
+    z-index: 99;
+    font-family: 'Judson';
+    font-size: 9em;
+    font-weight: 100;
+    background: -webkit-linear-gradient(#FED586, #fff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home-banner p{
+    position: relative;
+    top: -10px;
+    z-index: 99;
+    font-family: 'Quicksand';
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 100;
+}
+.book-button .book-event {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    z-index: 99;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    width: 300px;
+    height: 45px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+.book-button .book-event:hover {
+    background: #fff;
+    color: #171818;
+}
+.down i{
+    font-size: 30px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.down i:hover {
+    font-size: 40px;
+    transform: scale(1.5);
+}
+
+/* introduction section */
+
+.lightbubble{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.intro{
+    padding: 150px 15% 120px;
+    vertical-align: middle;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.home-content p {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Judson';
+    font-size: 1.9em;
+    word-spacing: 5px;
+    z-index: 99;
+    line-height: 50px;
+}
+.divider{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+.lineaccent{
+    margin-top: 60px;
+    width: 250px;
+}
+
+/*Events Overview*/
+
+.eventssec{
+    position: relative;
+    height: 3650px;
+    text-align: center;
+}
+
+.eventssec h1{
+    position: absolute;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4.5em;
+    font-weight: 100;
+    color: #ffffff;
+    padding-left: 60px;
+    border-bottom: 2px solid #FED586;
+    border-left: 60px;
+}
+
+.eventssec h1 span{
+
+    font-family: 'Judson';
+    font-size: 1em;
+    font-weight: 100;
+    color: var(--main-color);
+    font-style: italic;
+}
+/* Wedding */
+
+.lightbubble1{
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 110px;
+}
+
+.wedding {
+    position: relative;
+    text-align: center;
+    top: 250px;
+    margin-right: 500px;
+    margin-left: 0px;
+    z-index: 99;
+}
+
+.wedding-pic {
+    position: absolute;
+    text-align: right;
+    right: 0px;
+    z-index: 1000;
+}
+
+.wedding-pic2 {
+    position: absolute;
+    text-align: center;
+    top: 700px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+}
+
+.wedding h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.wedding p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.wedding .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.wedding .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Birthday */
+
+.lightbubble2{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 600px;
+}
+
+.birthday {
+    position: relative;
+    text-align: center;
+    top: 700px;
+    margin-right: 0px;
+    margin-left: 500px;
+    z-index: 99;
+    
+}
+
+.birthday-pic {
+    position: absolute;
+    top: 700px;
+    left: 0px;
+    z-index: 99;
+}
+
+.birthday-pic2 {
+    position: absolute;
+    text-align: center;
+    top: 1400px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+}
+
+.birthday h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.birthday p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.birthday .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.birthday .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Christening*/
+
+.lightbubble3{
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 1050px;
+}
+
+.christening {
+    position: relative;
+    text-align: center;
+    top: 1150px;
+    margin-right: 500px;
+    margin-left: 0;
+    z-index: 99;
+}
+
+.christening-pic {
+    position: absolute;
+    top: 1400px;
+    right: 0px;
+    z-index: 99;
+}
+
+.christening-pic2 {
+    position: absolute;
+    top: 2100px;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+}
+
+.christening h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.christening p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.christening .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.christening .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Anniversary*/
+
+.lightbubble4{
+    position: absolute;
+    margin-right: 50px;
+    margin-top: 1400px;
+}
+
+.anniversary {
+    position: relative;
+    text-align: center;
+    top: 1600px;
+    margin-right: 0px;
+    margin-left: 500px;
+    z-index: 99;
+}
+
+.anniversary-pic {
+    position: absolute;
+    top: 2100px;
+    left: 0px;
+    z-index: 99;
+}
+
+.anniversary-pic2 {
+    position: absolute;
+    top: 2750px;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+}
+
+.anniversary h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.anniversary p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.anniversary .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.anniversary .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Corporate*/
+
+.lightbubble5{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 1900px;
+}
+
+.corporate {
+    position: relative;
+    text-align: center;
+    top: 2000px;
+    margin-right: 500px;
+    margin-left: 0;
+    z-index: 99;
+}
+
+.corporate-pic {
+    position: absolute;
+    top: 2750px;
+    right: 0px;
+    z-index: 99;
+}
+
+.corporate-pic2 {
+    position: absolute;
+    top: 3430px;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+}
+
+.corporate h2 {
+    position: relative;
+    top: 10px;
+    font-family: 'Judson';
+    font-size: 4em;
+    font-weight: 100;
+    color: #FED586;
+}
+
+.corporate p {
+    position: relative;
+    top: 20px;
+    font-family: 'Quicksand';
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+}
+
+.corporate .see-more {
+    position: relative;
+    top: 50px;
+    width: 260px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.corporate .see-more:hover {
+    background: #fff;
+    color: #171818;
+}
+
+/*Full Story*/
+
+.storysec{
+    position: relative;
+    padding: 60px 15% 120px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("Pictures/home/eventbg.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 99;
+    text-align: center;
+    
+}
+
+.storysec .logo-story {
+    text-align: center;
+    justify-content: center;
+}
+
+.storysec h3 {
+    color:#fff;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 2em;
+    text-align: center;
+}
+
+.storysec h1 {
+    color: #FED586;
+    font-family: 'Judson';
+    margin-top: 25px;
+    font-weight: 200;
+    font-size: 2.8em;
+    text-align: center;
+}
+
+.storysec p {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Quicksand';
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.full-story{
+    margin-top: 20px;
+}
+.fullstory-button .full-story {
+    width: 230px;
+    height: 50px;
+    font-family: 'Quicksand';
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.fullstory-button .full-story:hover {
+    background: #fff;
+    color: #171818;
+    text-align: center;
+}
+
+/*footer*/
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #171818;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Poppins';
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .sec{
+    margin-right: 30px;
+}
+footer .container .sec.aboutus{
+    width: 40%;
+}
+
+footer .container h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+}
+
+footer .container h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #FED586;
+}
+
+footer p{
+    color:#999;
+}
+
+.sci{
+    margin-top: 20px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.sci li a:hover{
+    background: #FED586;
+}
+.sci li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+.quicklinks{
+    position: relative;
+    width: 25%;
+}
+.quicklinks ul li{
+    list-style: none;
+}
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.quicklinks ul li a:hover{
+    color: #fff;
+}
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span{
+    color: #999;
+}
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+.contact .info li a:hover{
+    color: #fff;
+}
+.copyright{
+    width: 100%;
+    background: #1a1a1a;
+    padding: 8px 100px;
+    text-align: center;
+    color: #999;
+    border-top: #fff;
+    border-width: 1px;
+}
+
+
+@media screen and (min-width: 600px){
+    .footer-right >*{
+        flex: 1;
+    }
+    .footer-left{
+        flex:1 0px;
+    }
+    .footer-right{
+        flex: 2 0px;
+    }
+}

@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #171818;
+    --second-bg-color: #232323;
+    --third-bg-color: #383838;
+    --text-color: #fff;
+    --main-color: #FED586;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+header{
+    z-index: 1000;
+    align-items: center;
+    background: transparent;
+    width: 200px;
+}
+
+main {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 30px;
+}
+/* left nav bar */ 
+
+.left-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: var(--bg-color);
+    position: fixed;
+    height: 100%;
+    overflow: none;
+    border-right: .1em solid #272727;
+}
+
+.sidebar a,
+.logout-button a {
+    font-family: 'Poppins';
+    display: block;
+    color: var(--text-color);
+    padding: 5px 30px;
+    text-decoration: none;
+    font-weight: lighter;
+    border-left: 4px solid;
+    border-color: transparent;
+    font-size: .8em;
+    font-weight: lighter;
+}
+
+.sidebar a.active,
+.logout-button a.active {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    opacity: 100%;
+    font-weight: 900;
+    border-left: 4px solid #fff;
+}
+
+.sidebar a:hover:not(.active),
+.logout-button a:hover:not(.active) {
+    color: var(--text-color);
+    font-weight: bolder;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+.profile-section h4 {
+    font-size: .8em;
+}
+
+.profile-section p {
+    font-size: .6em;
+    margin-bottom: 20px;
+}
+
+/* Logout Button */
+.logout-button {
+    position: absolute;
+    bottom: 20px;
+    text-align: left;
+    color: var(--text-color);
+    opacity: 100%;
+    font-weight: 300;
+}
+
+.logout-button a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Content */
+
+.top-content {
+    position: absolute;
+    left: 240px;
+    padding: 25px 0;
+    display: flex;
+    width: 75%;
+}
+
+.top-content h2 {
+    position: absolute;
+    top: 5px;
+    font-family: 'Poppins';
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.top-content img {
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    left: 935px;
+}
+
+/*-------------------------------------- 4 boxes --------------------------------------*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+.grid-item{
+    position: relative;
+    left: 210px;
+    top: 70px;
+    width: 235px;
+    height: 100px;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    pointer-events: none;
+}
+#box4{
+    background-color: var(--third-bg-color);
+}
+@media (max-width: 768px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-item-1{
+        grid-column: 1;
+    }
+}
+.grid-item p{
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--main-color);
+    padding-top: 15px;
+}
+.grid-item h6{
+    position: relative;
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: .8em;
+    top: -5px;
+    font-weight: lighter;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+.grid-item2{
+    position: relative;
+    left: 210px;
+    top: 85px;
+    width: 485px;
+    height: 250px;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+.grid-item2 h5{
+    position: relative;
+    left: 1px;
+    font-family: 'Poppins';
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 1.1em;
+}
+.grid-item2 a{
+    float: right;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: .7em;
+}
+.table-records{
+    border-collapse: collapse;
+}
+.table-records th {
+    font-size: .8em;
+    padding: 10px 52px 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.table-records td {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}

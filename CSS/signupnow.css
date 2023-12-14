@@ -1,0 +1,449 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #171818;
+    --second-bg-color: #272727;
+    --text-color: #fff;
+    --main-color: #FED586;
+}
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*signup-banner*/
+
+.wrapper-signup {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('Pictures/loginsignup/signup-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.signup-main-content {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 700px;
+    height: 400px;
+    background: transparent;
+    border: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+#checkbox {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+/*Signup*/
+
+.signup-main-content h2 {
+    color: #D0A65B;
+    font-size: 4.2em;
+    position: fixed;
+    top: 30px;
+    left: 100px;
+    font-family: 'Poppins';
+}
+.signup-main-content h2 span {
+    color: #fff;
+}
+.signup1 {
+    color: #fff;
+    position: fixed;
+    top: 120px;
+    left: 100px;
+}
+.signup1 p a {
+    color: #D0A65B;
+    text-decoration: none;
+}
+.signup1 p a:hover {
+    text-decoration: underline;
+}
+
+/*Input*/
+
+.input-box {
+    position: fixed;
+    top: 170px;
+    left: 100px;
+    width: 700px;
+    height: 50px;
+    border-bottom: transparent;
+}
+.input-box label {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: .8em;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+input::placeholder {
+    color: #fff;
+    font-weight: lighter;
+    opacity: .3;
+}
+::-ms-reveal {
+    filter: invert(100%);
+}
+.input-box input {
+    width: 700px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 12px 0 12px;
+}
+.input-box2 {
+    position: fixed;
+    top: 220px;
+    left: 100px;
+    width: 700px;
+    height: 50px;
+    border-bottom: transparent;
+}
+.input-box2 label {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: .8em;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.column-left2 {
+    position: relative;
+    width: 49%;
+    height: 50px;
+    border-bottom: transparent;
+    top: 25px;
+}
+.column-left2 input {
+    width: 343px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 12px 0 12px;
+}
+.column-right2 {
+    position: relative;
+    float: right;
+    top: -25px; 
+    width: 49%;
+    height: 50px;
+    border-bottom: transparent;
+}
+.column-right2 input {
+    width: 343px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 12px 0 12px;
+}
+.input-box2.after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.input-box3 {
+    position: fixed;
+    top: 320px;
+    left: 100px;
+    width: 700px;
+    height: 50px;
+    border-bottom: transparent;
+}
+.input-box3 label {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: .8em;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box3 input {
+    width: 700px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 12px 0 12px;
+}
+.input-box4 {
+    position: fixed;
+    top: 370px;
+    left: 100px;
+    width: 700px;
+    height: 50px;
+    border-bottom: transparent;
+}
+.input-box4 label {
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: .8em;
+    color: #fff;
+    opacity: 60%;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.column-left4 {
+    position: relative;
+    width: 49%;
+    height: 50px;
+    border-bottom: transparent;
+    top: 25px;
+}
+.column-left4 input {
+    width: 343px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 12px 0 12px;
+}
+.column-right4 {
+    position: relative;
+    float: right;
+    top: -25px; 
+    width: 49%;
+    height: 50px;
+    border-bottom: transparent;
+}
+.column-right4 input {
+    width: 343px;
+    height: 60px;
+    background-color: #303030;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px 12px 0 12px;
+}
+.input-box4.after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*remember-forgot*/
+
+.remember-forgot {
+    position: fixed;
+    top: 470px;
+    left: 95px;
+    font-size: .8em;
+    color: #fff;
+    font-weight: 500;
+    margin: 0px 5px 20px;
+    justify-content: space-between;
+    width: 700px;
+}
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 8px;
+}
+.remember-forgot a {
+    color: var(--main-color);
+    font-weight: lighter;
+    text-decoration: none;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/*signup button*/
+
+.btn {
+    position: fixed;
+    top: 480px;
+    left: 550px;
+    width: 250px;
+    height: 45px;
+    background: #D0A65B;
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Judson';
+    color: black;
+    font-weight: 800;
+}
+
+.btn:hover {
+
+    background: transparent;
+    outline: none;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #FED586;
+    font-weight: 800;
+}
+
+.logo {
+    position: fixed;
+    bottom: 35px;
+    right: 30px;
+}
+
+/* pop up */
+
+.hyperlink{
+    color: var(--main-color);
+    font-weight: lighter;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* hide the modal by default */
+    position: fixed; /* position the modal relative to the viewport */
+    z-index: 1; /* make the modal appear on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    backdrop-filter: blur(10px);
+  }
+  
+.modal-content {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--second-bg-color);
+    margin: 15% auto;
+    padding: 30px 30px 40px;
+    width: 40%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.5);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* add transition effect */
+    overflow-y: auto;
+}
+
+.titleterms {
+    color: var(--main-color);
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 30px;
+    margin-bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.modal-content p{
+    text-align: justify;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 13px;
+    position: relative;
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+.close-btn {
+    width: 15%;
+    height: 25px;
+    background: #FED586;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Judson';
+    color: var(--bg-color);
+    font-weight: bolder;
+    margin-top: 6px;
+    padding: 5px 20px 5px;
+    margin-bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background: transparent;
+    outline: none;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 1.5px solid #FED586;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1em;
+    color: #FED586;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

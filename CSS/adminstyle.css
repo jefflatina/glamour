@@ -1,0 +1,1183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #171818;
+    --second-bg-color: #272727;
+    --text-color: #fff;
+    --main-color: #FED586;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+header{
+    z-index: 1000;
+    align-items: center;
+    background: transparent;
+    width: 200px;
+}
+
+main {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+/* left nav bar */ 
+
+.left-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: var(--bg-color);
+    position: fixed;
+    height: 100%;
+    overflow: none;
+    border-right: .1em solid #272727;
+}
+
+.sidebar a,
+.logout-button a {
+    font-family: 'Poppins';
+    display: block;
+    color: var(--text-color);
+    padding: 5px 30px;
+    text-decoration: none;
+    font-weight: lighter;
+    border-left: 4px solid;
+    border-color: transparent;
+    font-size: .8em;
+    font-weight: lighter;
+}
+
+.sidebar a.active,
+.logout-button a.active {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    opacity: 100%;
+    font-weight: 900;
+    border-left: 4px solid #fff;
+}
+
+.sidebar a:hover:not(.active),
+.logout-button a:hover:not(.active) {
+    color: var(--text-color);
+    font-weight: bolder;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+.profile-section h4 {
+    font-size: .8em;
+}
+
+.profile-section p {
+    font-size: .6em;
+    margin-bottom: 20px;
+}
+
+/* Logout Button */
+.logout-button {
+    position: absolute;
+    bottom: 20px;
+    text-align: left;
+    color: var(--text-color);
+    opacity: 100%;
+    font-weight: 300;
+}
+
+.logout-button a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Content */
+
+.top-content {
+    position: absolute;
+    left: 250px;
+    padding: 25px 0;
+    display: flex;
+    width: 75%;
+}
+
+.top-content h2 {
+    position: absolute;
+    top: 5px;
+    font-family: 'Poppins';
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.top-content img {
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    left: 925px;
+}
+
+/* Container */
+
+.container {
+    position: relative;
+    background-color: var(--second-bg-color);
+    width: 975px;
+    left: 220px;
+    border-radius: 10px;
+    top: 60px;
+    padding: 20px;
+    font-family: 'Poppins';
+    margin-bottom: 60px;
+}
+
+.container h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+/* Pagination Container */
+
+.container-adminlist {
+    position: relative;
+    background-color: var(--second-bg-color);
+    width: 975px;
+    left: 220px;
+    border-radius: 10px;
+    top: 60px;
+    padding: 20px;
+    font-family: 'Poppins';
+    margin-bottom: 60px;
+}
+
+.container-adminlist h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.dataTables_length select {
+    background-color: var(--bg-color);
+    color: #fff;
+    border: none;
+ }
+ .dataTables_filter input {
+    background-color: var(--bg-color);
+    color: #fff;
+    border: none;
+}
+
+.dt-button {
+    background-color: #21d17e;
+  }
+
+/* Table */
+
+.table-records {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.table-records th, 
+.table-records td {
+    padding: 10px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: .65em;
+}
+
+.table-records th {
+    background-color: transparent;
+    font-size: .8em;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+  
+button {
+    padding: 2px 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    height: 20px;
+    margin: 5px;
+}
+
+button:hover {
+    border-radius: 3px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.confirm-btn {
+    background-color: green;
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.disable-btn {
+    background-color: #404040;
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.edit-btn {
+    margin-left: 3px;
+    background-color: rgb(166, 166, 15);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.view-btn {
+    margin-left: 3px;
+    background-color: rgb(166, 166, 15);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.delete-btn {
+    margin-left: 3px;
+    background-color: rgb(131, 1, 1);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.confirm-btn:hover {
+    background-color: rgb(81, 218, 81);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.edit-btn:hover {
+    margin-left: 3px;
+    background-color: rgb(230, 230, 84);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.delete-btn:hover {
+    margin-left: 3px;
+    background-color: rgb(222, 78, 78);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 30px;
+    padding: 5px 0 5px;
+}
+
+.reset-btn {
+    margin-left: 3px;
+    background-color: green;
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 120px;
+    padding: 5px 0 5px;
+}
+
+.reset-btn:hover {
+    margin-left: 3px;
+    background-color: rgb(81, 218, 81);
+    border: none;
+    border-radius: 2px;
+    height: 100%;
+    width: 120px;
+    padding: 5px 0 5px;
+    color: #fff;
+}
+
+/* Pagination */
+
+.pendingpagecontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins';
+}
+
+.pendingpagenum h4{
+    font-size: .8em;
+    font-family: 'Poppins';
+    background-color: #383838;
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: lighter;
+}
+
+.pagination{
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Poppins';
+    justify-content: center;
+    align-items: center;
+}
+
+.prevnext{
+    color: var(--text-color);
+    background: transparent;
+    font-size: .8em;
+    justify-content: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: bolder;
+}
+
+.prevnext:hover{
+    color: var(--main-color);
+    background: transparent;
+    font-size: .8em;
+    justify-content: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: bolder;
+}
+
+.page-item a{
+    margin: 0 2px;
+    background-color: #383838;
+    color: #fff;
+    font-size: .8em;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.page-item a:hover{
+    margin: 0 2px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-size: .8em;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-weight: bolder;
+}
+
+.page-item-active a{
+    margin: 0 2px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-size: .8em;
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.page-item-active a:hover{
+    margin: 0 2px;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    font-size: .8em;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-weight: bolder;
+}
+
+
+/*----------------------------------------------- Add/Edit Coordinator -------------------------------------------------*/
+
+.container h1{
+    color: var(--main-color);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.addnewform-coor,
+.editform {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.addnewform-coor h4,
+.editform-coor h4{
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.addnewform-coor input,
+.editform-coor input{
+    width: 100%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.add-btn-coor, 
+.back-btn-coor,
+.save-btn-coor {
+    position: relative;
+    top: 30px;
+    right: 5px;
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 900;
+    padding: 0px 20px 0px;
+    float: right;
+}
+
+.add-btn-coor:hover, 
+.back-btn-coor:hover,
+.save-btn-coor:hover {
+    background-color: #fff;
+    color: black;
+}
+
+
+
+
+
+/* ----------------------------------- EVENT BOOKING LIST ------------------------------ */
+
+/*Viewed Details */
+
+.bookingdetails-row1 h5,
+.bookingdetails-row2 h5,
+.bookingdetails-row3 h5,
+.bookingdetails-row4 h5,
+.bookingdetails-row5 h5 {
+    font-size: .9em;
+}
+
+.bookingdetails-row1 p{
+    font-size: .9em;
+    background-color: #171818;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px 5px;
+    border-radius: 4px;
+    margin: 10px 0px 15px;
+}
+
+.bookingdetails-row2 p,
+.bookingdetails-row3 p {
+    font-size: .9em;
+    background-color: #171818;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px 5px;
+    border-radius: 4px;
+    margin: 10px 0px 15px;
+}
+
+.bookingdetails-row4 p{
+    font-size: .9em;
+    background-color: #171818;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px 5px;
+    border-radius: 4px;
+    margin: 10px 0px 15px;
+    margin-bottom: 100px;
+}
+
+.bookingdetails-row2,
+.bookingdetails-row3,
+.bookingdetails-row6 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.bookingdetails-row1, 
+.bookingdetails-row4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.bookingdetails-row4 p{
+    margin-bottom: 40px;
+}
+
+.coorapprovance{
+    font-size: 1em;
+    background-color: #454545;
+    width: 95%;
+    padding: 10px 15px 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+}
+
+.coorapprovance i{
+    font-size: 1em;
+    font-family: 'Poppins';
+}
+
+.approve{
+    font-size: .75em;
+    font-family: 'Poppins';
+    margin-top: 5px;
+}
+
+.usernamecoor{
+    font-size: .7em;
+    font-family: 'Poppins';
+    margin-top: 3px;
+    opacity: 90%;
+    font-weight: lighter;
+}
+
+.venuetitle,
+.cuisinetitle,
+.styletitle,
+.extratitle {
+    font-size: .9em;
+    padding: 5px 5px 5px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    font-family: 'Poppins';
+}
+
+
+
+/* Edit Details */
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.editbookingdetails-row1 h5,
+.editbookingdetails-row2 h5,
+.editbookingdetails-row3 h5,
+.editbookingdetails-row4 h5,
+.editbookingdetails-row5 h5,
+.editbookingdetails-row6 h5,
+.editbookingdetails-row7 h5 {
+    font-size: .9em;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.editbookingdetails-row1 input,
+.editbookingdetails-row2 input,
+.editbookingdetails-row3 input,
+.editbookingdetails-row4 input{
+    font-size: .8em;
+    background-color: #171818;
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+.editbookingdetails-row1,
+.editbookingdetails-row2,
+.editbookingdetails-row3,
+.editbookingdetails-row4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: var(--bg-color);
+    border-style: none;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: .8em;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+  
+.checkbox-group label {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 15px;
+    color: #fff;
+    font-family: 'Quicksand';
+    font-weight: 100;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    color: #fff;
+}
+
+
+
+/* ------------------------------------- CALENDAR ----------------------------------- */
+
+.calendar{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent;
+}
+
+.monthtitle{
+    font-family: 'Poppins';
+    padding: 10px;
+    font-family: 100px;
+}
+
+.empty {
+    display: none;
+}
+
+.calendar td{
+    border: 3.5px solid var(--second-bg-color);
+    padding: 2px 10px 10px;
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+.calendar th{
+    font-family: 'Poppins';
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.calendar td{
+    height: 100%;
+    background-color: #343434;
+    padding: 10px 10px 40px;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    font-size: .7em;
+}
+
+.calendar td:hover{
+    height: 100%;
+    background-color: #3c3c3c;
+    padding: 10px 10px 40px;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    font-size: .7em;
+}
+
+.booked{
+    background-color: #FED586;
+    font-family: 'Poppins';
+    font-size: 10px;
+    color: var(--bg-color);
+    padding: 2px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.avail{
+    font-family: 'Poppins';
+    font-size: 10px;
+    color: #343434;
+    padding: 2px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.today h4{
+    background-color: green;
+    border-radius: 100px;
+    padding: 0px 10px 0px;
+    width: 30px;
+}
+
+.btn-prevnext{
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-size: .8em;
+}
+
+.btnprevnext{
+    background-color: #353535;
+    font-family: 'Poppins';
+    font-size: .7em;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+.btnprevnextactive{
+    background-color: var(--main-color);
+    font-family: 'Poppins';
+    font-size: .7em;
+    color: var(--bg-color);
+    padding: 5px 20px;
+    font-weight: bolder;
+    cursor: auto;
+}
+
+
+.btncurrent{
+    background-color: var(--second-bg-color);
+    font-family: 'Poppins';
+    font-size: .7em;
+    color: #fff;
+    padding: 10px;
+}
+
+.btnprevnext:hover{
+    background-color: var(--main-color);
+    font-family: 'Poppins';
+    font-size: .7em;
+    font-weight: bold;
+    color: var(--bg-color);
+    padding: 5px 20px;
+}
+
+.btncurrent:hover{
+    background-color: var(--second-bg-color);
+    font-family: 'Poppins';
+    font-size: .7em;
+    color: var(--main-color);
+    padding: 10px;
+}
+
+/* ------------------------------------- VENUES ----------------------------------- */
+
+/* Venue List */
+
+.titleandbutton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 10px;
+}
+
+.titleandbutton1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 10px;
+    margin-top: 50px;
+}
+
+.table-records img {
+    width: 30%;
+    height: 50px;
+    overflow: hidden;
+}
+ 
+.venue-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actions{
+    display: inline-block;
+}
+
+/* Add New/Edit Venues */
+
+.addnewform,
+.editform {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.addnewform h4,
+.editform h4{
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.addnewform input,
+.editform input{
+    width: 100%;
+}
+
+input {
+    background-color: #171818;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-size: .8em;
+    font-weight: 300;
+    color: #fff;
+    border-style: none;
+    z-index: 100;
+}
+
+select {
+    background-color: #171818;
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-size: .8em;
+    font-weight: 300;
+    color: #fff;
+    border-style: none;
+    z-index: 100;
+   
+}
+
+input[type="file"] {
+    padding: 40px 40% 40px;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: #c3c3c3;
+    font-size: .8em;
+    font-weight: normal;
+    font-family: 'Poppins';
+    box-shadow: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.send-btn{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-family: 'Poppins';
+    padding: 0px 5px 0px;
+    float: right;
+}
+
+.send-btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+
+}
+
+
+.add-btn, 
+.back-btn,
+.save-btn {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 900;
+    padding: 0px 20px 0px;
+    float: right;
+}
+
+
+.back-btn1 {
+    background-color: transparent;
+    color: var(--main-color);
+    font-family: 'Poppins';
+    font-weight: 900;
+    padding: 0px 20px 0px;
+    float: right;
+    border: 1px solid var(--main-color);
+}
+
+.back-btn1:hover {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    border: 1px solid white;
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+/* ------------------------------- SALES REPORT ------------------------- *?/
+/* Container */
+
+.container-sales {
+    position: relative;
+    background-color: var(--second-bg-color);
+    width: 975px;
+    left: 220px;
+    border-radius: 10px;
+    top: 60px;
+    padding: 20px;
+    font-family: 'Poppins';
+    margin-bottom: 60px;
+ 
+}
+
+.container-sales h3 {
+    color: var(--main-color);
+    font-weight: light;
+
+}
+
+.grid-item p{
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--main-color);
+    padding-top: 15px;
+}
+.grid-item h6{
+    position: relative;
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: .8em;
+    top: -5px;
+    font-weight: lighter;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+.grid-item2{
+    position: relative;
+    left: 220px;
+    top: 18px;
+    width: 480px;
+    height: auto;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+.grid-item2 h5{
+    position: relative;
+    left: 1px;
+    font-family: 'Poppins';
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 1.1em;
+}
+.grid-item2 a{
+    float: right;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: .7em;
+}
+
+.chart-container {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+
+.salestable{
+    width: 100%;
+    padding: 10px;
+    line-height: 1.5; 
+    border-collapse: collapse;
+     border-spacing: 0;
+}
+
+  .salestable th, 
+  .salestable td {
+      padding: 10px 10px;
+
+      line-height: 2;
+  }
+
+  .container-sales2 {
+    position: relative;
+    background-color: var(--second-bg-color);
+    width: 975px;
+    left: 220px;
+    border-radius: 10px;
+    top: 20px;
+    padding: 20px;
+    font-family: 'Poppins';
+    margin-bottom: 60px;
+ 
+}
+
+.container-sales2 h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+/*-------------------------------------------- POP UP --------------------------------------------*/
+
+.modal {
+    position: fixed; /* position the modal relative to the viewport */
+    z-index: 1; /* make the modal appear on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+  }
+
+.modal-content{
+    position: fixed;
+    margin-top: 100px;
+    width: 700px;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #383838;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+.modal-conten h1{
+    font-family: 'Poppins';
+    color: var(--main-color);
+    font-size: 1.4em;
+}
+.modal-conten h2{
+    font-family: 'Poppins';
+    color: var(--text-color);
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.column-container{
+    display: flex;
+}
+.column-item{
+    flex: 1;
+}
+.column1 h3, 
+.column2 h3,
+.column-item h3 {
+    font-family: 'Poppins';
+    font-size: .8em;
+    font-weight: 500;
+    margin: 0;
+}
+.column1 p, 
+.column2 p,
+.column-item p {
+    background-color: #232323;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px 15px;
+}
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-container button{
+    font-family: 'Poppins';
+    width: 85px;
+    height: 25px;
+    font-size: .7em;
+    font-weight: 900;
+    border: none;
+    border-radius: 0;
+}
+.back-button {
+    background-color: var(--main-color);
+    color: #232323;
+}
+.button-group {
+    display: flex;
+}
+.approve-button,
+.decline-button {
+    margin-left: 10px;
+    color: var(--text-color);
+}
+.approve-button{
+    background-color: #18871D;
+}
+.decline-button{
+    background-color: #7E0000;
+}
